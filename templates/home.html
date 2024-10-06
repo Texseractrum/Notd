@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link the CSS file using url_for to correctly point to the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Noted</title>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <ul>
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <h1>Noted.</h1>
+    <h2>Turning ideas into motion</h2>
+    <h4>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+    </h4>
+</body>
+</html>
